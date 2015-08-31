@@ -26,16 +26,4 @@ describe Airport do
       expect { subject.allow_landing Plane.new }.to raise_error 'Airport is full!'
     end
   end
-
-  # context 'traffic control' do
-  #   it 'a plane cannot land if the airport is full'
-
-  #   context 'weather conditions' do
-  #     it 'a plane cannot take off when there is a storm brewing'
-  #     expect { subject.allow_landing aeroplane }.to raise_error 'It\'s too stormy to fly!'
-
-  #     it 'a plane cannot land in the middle of a storm'
-  #     expect { subject.allow_takeoff aeroplane }.to raise_error 'It\'s too stormy to land!'
-  # #   end
-  # end
 end
