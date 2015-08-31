@@ -13,7 +13,7 @@ class Plane
   end
 
   def takes_off
-    # @flying_status = true
+    @flying_status = true
   end
 
 end

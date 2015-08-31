@@ -3,15 +3,17 @@ require 'plane'
 require 'airport'
 
 feature 'Planes can land at the airport' do
-  scenario 'A plane can land at the airport' do
+  scenario 'The weather is fine' do
     plane = Plane.new
     airport = Airport.new
     airport.allow_landing(plane)
     expect(airport.planes).to eq [plane]
     expect(plane.flying_status).to be false
   end
+end
 
-  scenario 'Plane can take off from the airport' do
+feature 'Planes can take off from the airport' do
+  scenario 'The weather is fine' do
     aeroplane = Plane.new
     airport = Airport.new
     airport.allow_takeoff(aeroplane)
@@ -28,7 +30,6 @@ feature 'Planes cannot land when airport is full' do
   end
 end
 
-feature 'Planes have a flying status when initialised'
 
 # feature 'Planes cannot land when conditions are stormy' do
 #   scenario 'A plane tries to land when it\'s stormy' do
