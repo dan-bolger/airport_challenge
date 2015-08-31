@@ -1,9 +1,32 @@
-I have been creating a model of an airport using TDD to drive the project.
+# AIRPORT CHALLENGE
 
-At this stage I have got as far as clearing 3 main feature tests. The first two were essentially created as mirrors of each other - Taking off and landing.
+Creating a model of an airport in Ruby, using TDD to drive the project.
 
-After this part I came up against it a little, eventually (after much trial and much error) shoring up a third feature test handling the capacity of the airport.
+This is a reboot of the week 1 challenge at Makers Academy, honing the basics of TDD and BDD. Object Oriented Fun!
 
-I've commented out what came next - I was attempting to draft a couple of basic tests to handle the weather. If I'm correct in following how TDD works, The feature test is being set up first for something simple - a basic 'if it's stormy don't allow takeoff', followed by a concurrent 'if it's stormy don't allow landing' scenario.
+## Task
 
-I'm not yet clear on the exact way I'm going to handle even receiving news of the weather, let alone then expanding on the test and code to account for the requested random conditions, but will hopefully get a chance to look into this as the week progresses.
+We have a request from a client to write the software to control the flow of planes at an airport. The planes can land and take off provided that the weather is sunny. Occasionally it may be stormy, in which case no planes can land or take off. Here are the user stories that we worked out in collaboration with the client.
+
+```
+As a pilot
+So that I can arrive at my specified destination
+I would like to land my plane at the appropriate airport [x]
+
+As a pilot
+So that I can set off for my specified destination
+I would like to be able to take off from the appropriate airport [x]
+
+As an air traffic controller
+So that I can avoid collisions
+I want to be able to prevent airplanes landing when the airport is full [x]
+
+As an air traffic controller
+So that I can avoid accidents
+I want to be able to prevent airplanes landing when the weather is stormy [ ]
+```
+
+## Other points:
+
+- Use a random number generator to set the weather (it is normally sunny but on rare occasions it may be stormy)
+- Every plane must have a status indicating whether it's flying or landed.

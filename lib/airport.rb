@@ -1,15 +1,19 @@
-require 'plane'
+require_relative 'airport'
 
 class Airport
 
   CAPACITY = 6
+
+  attr_reader :planes
+  attr_accessor :planes
 
   def initialize
     @planes = []
     @capacity = CAPACITY
   end
 
-  def allow_takeoff(_aeroplane)
+  def allow_takeoff(aeroplane)
+    aeroplane.takes_off
   end
 
   def allow_landing(aeroplane)

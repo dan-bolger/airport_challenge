@@ -5,16 +5,20 @@ describe Plane do
 
   it { is_expected.to respond_to :takes_off }
 
-  xit 'Can land' do
-
+  it 'has a flying status when created' do
+    plane = Plane.new
+    expect(plane.flying_status).to be true
   end
 
-  xit 'Has a landed status when on the ground'
+  # xit 'Can land' do
 
-  xit 'has a flying status when created'
+  # end
 
-  xit 'has a flying status when in the air'
+  # xit 'Has a landed status when on the ground'
 
-  xit 'changes its status to flying after taking off'
+
+  # xit 'has a flying status when in the air'
+
+  # xit 'changes its status to flying after taking off'
 
 end
